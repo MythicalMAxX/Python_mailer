@@ -1,2 +1,2 @@
-gmail = "pokemongo1003player@gmail.com"
-password = "14147714"
+gmail = "gmailaddress" # example: gmail = "example@gmail.com"
+password = "password"
