@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Jan 13 10:09:27 2022
+@author: Vinamra Yadav
+"""
+
 import yagmail
 import credentials
 
