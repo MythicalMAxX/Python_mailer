@@ -12,9 +12,10 @@ from time import sleep
 import pprint as p
 from art import *
 
-
-task = ["live price","company info","historical data","top gainers","top loosers","top crypto","trending today","news","quit"]
+task = ["live price", "company info", "historical data", "top gainers", "top loosers", "top crypto", "trending today",
+        "news", "quit"]
 task_len = len(task)
+
 
 def progress():
     for i in tqdm(range(101),
@@ -22,9 +23,11 @@ def progress():
                   ascii=False, ncols=75):
         sleep(0.01)
 
+
 def error1():
     print("Check your internet connection")
     print("Check for your input")
+
 
 def start():
     print("Hi what can i do for you?"
@@ -75,7 +78,7 @@ def historical_data():
                      "\n Select interval:")
 
     try:
-        data = si.get_data(stock_name,start_date,end_date,interval)
+        data = si.get_data(stock_name, start_date, end_date, interval)
         print(data)
         progress()
         start()
@@ -83,6 +86,7 @@ def historical_data():
         print("Something Went Wrong... Try Again Later")
         error1()
         author()
+
 
 def top_gainers():
     try:
@@ -116,6 +120,7 @@ def top_crypto():
         print("Something Went Wrong... Try Again Later")
         author()
 
+
 def trending():
     try:
         trend = si.get_day_most_active()
@@ -126,6 +131,7 @@ def trending():
         print("Something Went Wrong... Try Again Later")
         author()
 
+
 def News():
     stock_name = input("Enter stock nse code:")
 
@@ -134,7 +140,7 @@ def News():
         for i in range(5):
             trend = tnews[i]
             trend = trend["link"]
-            p.pprint(f"News {i+1}). {trend}")
+            p.pprint(f"News {i + 1}). {trend}")
         progress()
         start()
     except:
@@ -149,7 +155,7 @@ def operation_type(operation):
 
         if operation == "live price":
             live_price()
-        
+
         elif operation == "company info":
             About()
         elif operation == "historical data":
@@ -166,7 +172,7 @@ def operation_type(operation):
             News()
         elif operation == "quit":
             confirmation = input("Would you like to close the program?"
-                  "\nEnter y if yes or any key if no:")
+                                 "\nEnter y if yes or any key if no:")
             if confirmation == "y":
                 author()
                 quit()
@@ -180,9 +186,11 @@ def operation_type(operation):
         progress()
         start()
 
+
 def author():
     print("Author:")
     tprint("Vinamra Yadav", "3-d")
+
 
 def internet_check():
     interval = 1
