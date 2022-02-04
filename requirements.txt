@@ -1,1 +1,1 @@
-pip install yagmail==0.15.277
+yagmail==0.15.277
